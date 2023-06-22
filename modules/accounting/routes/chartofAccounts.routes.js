@@ -1,0 +1,14 @@
+const   router = require('express').Router();
+const codeController = require('../controllers/chartofAccounts.controller');
+router.get('/', codeController.slectAllchartofaccount);
+router.get('/all/accountname', codeController.selectAllaccount);
+router.get('/all/parents/:c_id', codeController.selectallparents);
+router.get('/all/accoutType/:ac_type',codeController.selectaccountType);
+router.get('/all/account',codeController.selectaccount);
+router.post('/create',codeController.insertchartofaccount);
+router.get('/all/:ac_type',codeController.selectallbyid);
+router.get('/Beginning/:id',codeController.editchartBeginning);
+router.post('/update',codeController.Updatechartofaccount);
+router.get('/stutas/:c_id',codeController.selectcreatestutes);
+router.get('/bank',codeController.selectbank);
+module.exports = router;
